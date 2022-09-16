@@ -32,10 +32,10 @@ object WordInfoModule {
     @Provides
     @Singleton
     fun provideWordInfoRepository(
-        dao: WordInfoDao,
+        db: WordInfoDatabase,
         api: DictionaryApi
     ): WordInfoRepository {
-        return WordInfoRepositoryImpl(api, dao)
+        return WordInfoRepositoryImpl(api, db.dao)
     }
 
     @Provides
@@ -49,7 +49,7 @@ object WordInfoModule {
 
     @Provides
     @Singleton
-    fun proviedDictionaryApi(): DictionaryApi {
+    fun provideDictionaryApi(): DictionaryApi {
         return Retrofit.Builder()
             .baseUrl(DictionaryApi.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
