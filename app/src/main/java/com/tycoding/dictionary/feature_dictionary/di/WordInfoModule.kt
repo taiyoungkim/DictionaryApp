@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.room.Room
 import com.google.gson.Gson
 import com.tycoding.dictionary.feature_dictionary.data.local.Converters
-import com.tycoding.dictionary.feature_dictionary.data.local.WordInfoDao
 import com.tycoding.dictionary.feature_dictionary.data.local.WordInfoDatabase
 import com.tycoding.dictionary.feature_dictionary.data.remote.DictionaryApi
 import com.tycoding.dictionary.feature_dictionary.data.repository.WordInfoRepositoryImpl
