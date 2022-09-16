@@ -16,5 +16,5 @@ interface WordInfoDao {
     suspend fun deleteWordInfos(words: List<String>)
 
     @Query("SELECT * FROM wordinfoentity WHERE word LIKE '%' || :word || '%'")
-    suspend fun selectWordInfos(word: String): List<WordInfoEntity>
+    suspend fun getWordInfos(word: String): List<WordInfoEntity>
 }
